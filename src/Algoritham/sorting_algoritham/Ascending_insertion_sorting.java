@@ -1,4 +1,4 @@
-package Sorting;
+package src.Algoritham.sorting_algoritham;
 
 import java.util.Arrays;
 
