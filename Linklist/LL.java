@@ -3,18 +3,30 @@ public class LL {
     node head;
     node tail;
     int size;
-//    node index(){
-//
-//    }
+    node index(int index){
+        node temp=head;
+        for (int i = 1; i <index-1; i++) {
+            temp=temp.next;
+        }
+     return temp;
+    }
     public void delete(int index){
-        if (index==0){
+        if (index==1){
             head=head.next;
             size--;
+            return;
         }
         else if(index==size){
-//            node temp=index();
-
+            node temp=index(index);
+            temp.next=null;
+            tail=temp;
+            size--;
+            return;
         }
+        node temp=index(index);
+        node swap=temp.next;
+        temp.next=swap.next;
+      size--;
 
     }
     public void insertlast(int data){
@@ -29,7 +41,6 @@ public class LL {
         size++;
 
     }
-
     public void insertmiddle(int data,int index){
         if (index==0){
             insertfirst(data);
@@ -69,7 +80,7 @@ public class LL {
             System.out.print(temp.data +" ->");
             temp=temp.next;
         }
-//        System.out.println("\n"+size);
+        System.out.println("\n"+size);
     }
  public   class node {
        int data;
@@ -86,7 +97,8 @@ public class LL {
         list.insertfirst(9);
         list.insertlast(9);
         list.insertlast(2);
-        list.insertmiddle(10,10);
+//        list.insertmiddle(10,);
+        list.delete(3);
         list.display();
     }
 }
