@@ -1,4 +1,7 @@
 package Linklist;
+
+import java.util.Scanner;
+
 public class LL {
     node head;
     node tail;
@@ -92,13 +95,56 @@ public class LL {
        }
    }
     public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
         LL list=new LL();
-        list.insertfirst(3);
-        list.insertfirst(9);
-        list.insertlast(9);
-        list.insertlast(2);
-//        list.insertmiddle(10,);
-        list.delete(3);
-        list.display();
+//        list.insertfirst(3);
+//        list.insertfirst(9);
+//        list.insertlast(9);
+//        list.insertlast(2);
+////        list.insertmiddle(10,);
+//        list.delete(3);
+//        list.display();
+
+        int n;
+        while(true){
+            System.out.println("which operation you have to perform" +
+                    "\n 1. insertfirst    2.insertlast 3. insertmiddle" +
+                    "\n 4.delete  ");
+            n=input.nextInt();
+
+
+            switch (n) {
+                case 1 -> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    list.insertfirst(data);
+                    list.display();
+                }
+                case 2 -> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    list.insertlast(data);
+                    list.display();
+                }
+                case 3-> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    System.out.println("enter index : ");
+                    int index=input.nextInt();
+                    list.insertmiddle(data,index);
+                    list.display();
+                }
+                case 4 -> {
+                    System.out.println("enter index : ");
+                    int index=input.nextInt();
+                    list.delete(index);
+                    list.display();
+                }
+            }
+            if (n>4){
+                System.out.println("thanks for playing");
+                break;
+            }
+        }
     }
 }
