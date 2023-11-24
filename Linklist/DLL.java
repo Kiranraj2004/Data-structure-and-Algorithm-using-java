@@ -1,5 +1,7 @@
 package Linklist;
 
+import java.util.Scanner;
+
 public class DLL {
     Node head;
     Node tail;
@@ -105,17 +107,62 @@ public class DLL {
     }
 
     public static void main(String[] args) {
-        DLL ob=new DLL();
-        ob.insert(1);
-        ob.insert(2);
-        ob.insert(3);
-        ob.insert(4);
-        ob.insertfirst(10);
-        ob.insertmiddle(8,0);
-        ob.delete(2);
-        ob.display();
-        ob.displayreverse();
+        DLL list=new DLL();
+        Scanner input=new Scanner(System.in);
+//        ob.insert(1);
+//        ob.insert(2);
+//        ob.insert(3);
+//        ob.insert(4);
+//        ob.insertfirst(10);
+//        ob.insertmiddle(8,0);
+//        ob.delete(2);
+//        ob.display();
+//        ob.displayreverse();
 
+        int n;
+        while(true){
+            System.out.println("which operation you have to perform" +
+                    "\n 1. insertfirst    2.insertlast 3. insertmiddle" +
+                    "\n 4.delete  5.reverse list ");
+            n=input.nextInt();
+
+
+            switch (n) {
+                case 1 -> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    list.insertfirst(data);
+                    list.display();
+                }
+                case 2 -> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    list.insert(data);
+                    list.display();
+                }
+                case 3-> {
+                    System.out.println("enter data : ");
+                    int data = input.nextInt();
+                    System.out.println("enter index : ");
+                    int index=input.nextInt();
+                    list.insertmiddle(data,index);
+                    list.display();
+                }
+                case 4 -> {
+                    System.out.println("enter index : ");
+                    int index=input.nextInt();
+                    list.delete(index);
+                    list.display();
+                }
+                case 5 ->{
+                 list.displayreverse();
+                }
+            }
+            if (n>5){
+                System.out.println("thanks for playing");
+                break;
+            }
+        }
 
     }
 }
