@@ -3,16 +3,66 @@ package Linklist;
 public class DLL {
     Node head;
     Node tail;
+    int size;
+    public void delete(int index){
+        if (index==0){
+            head=head.next;
+            head.prev=null;
+            size--;
+            return;
+        }
+        if (index==size){
+            tail= tail.prev;
+            tail.next=null;
+            size--;
+            return;
+        }
+        Node temp=head,nextnode;
+        for (int i = 1; i <index ; i++) {
+            temp=temp.next;
+        }
+        nextnode=temp.next.next;
+        temp.next=nextnode;
+        nextnode.prev=temp;
+        size--;
+    }
+    public void  insertmiddle(int data,int index){
+        if (index==0){
+            insertfirst(data);
+            return;
+        } else if (index==size) {
+            insert(data);
+            return;
+        }
+        else if (index>size){
+            System.out.println("please enter valid index");
+            return;
+        }
+        Node temp,nextnode;
+        Node ob=new Node(data);
+        temp=head;
+        for (int i = 1; i <index ; i++) {
+            temp=temp.next;
+        }
+        nextnode=temp.next;
+        temp.next=ob;
+        ob.prev=temp;
+        ob.next=nextnode;
+        nextnode.prev=ob;
+        size++;
+    }
     public void insert(int data){
         Node ob=new Node(data);
         if (head==null){
             tail=head=ob;
             head.prev=null;
+            size++;
         }
         else{
             tail.next=ob;
             ob.prev=tail;
             tail=ob;
+            size++;
 
         }
     }
@@ -26,6 +76,7 @@ public class DLL {
         ob.next=head;
         head.prev=ob;
         head=ob;
+        size++;
     }
 
     public void display(){
@@ -60,8 +111,11 @@ public class DLL {
         ob.insert(3);
         ob.insert(4);
         ob.insertfirst(10);
+        ob.insertmiddle(8,0);
+        ob.delete(2);
         ob.display();
-//        ob.displayreverse();
+        ob.displayreverse();
+
 
     }
 }
