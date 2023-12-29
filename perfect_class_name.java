@@ -1,6 +1,6 @@
 public class perfect_class_name {
     public static void main(String[] args) {
-        String s="Convert an Array Into a 2D Array With Conditions\n";
+        String s="Minimum Number of Operations to Move All Balls to Each Box";
         underscore(s);
     }
     static void underscore(String s){
