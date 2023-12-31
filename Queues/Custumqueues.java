@@ -1,7 +1,7 @@
 package Queues;
 
 public class Custumqueues {
-    private int[]data;
+    private final int[]data;
     private static final int max_size=10;
 
     public Custumqueues(int size) {
