@@ -25,15 +25,15 @@ public class Custumqueues {
             this.data[rear]=data;
         }
     }
-    int deque() throws Exception {
+    int deque() throws Exceptionalclass {
         if (isempty()){
-            throw new Exception("the queue is empty");
+            throw new  Exceptionalclass ("empty String ");
         }
         return data[front++];
     }
 
     private boolean isempty() {
-        return front==data.length-1;
+        return front==-1||front== data.length;
     }
 
     private boolean isfull() {
