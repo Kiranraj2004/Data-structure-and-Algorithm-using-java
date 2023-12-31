@@ -9,21 +9,8 @@ public class Main {
         n.push(31);
         n.push(31);
         n.push(31);
-
-
-
         System.out.println(n.pop());
         System.out.println(n.pop());
-
-
-
-
-
-
-
-
-
-
 
     }
 }
