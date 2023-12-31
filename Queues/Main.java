@@ -12,5 +12,9 @@ public class Main  {
         System.out.println(a.deque());
 //        System.out.println(a.deque());
         a.enque(13);
+        System.out.println(a.deque());
+        System.out.println(a.deque());
+        a.enque(20);
+        System.out.println(a.deque());
     }
 }

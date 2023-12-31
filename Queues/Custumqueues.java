@@ -12,6 +12,12 @@ public class Custumqueues {
     }
     private int front=-1,rear=-1;
     void enque (int data){
+//        if(front==this.data.length){
+//            front=0;
+//            this.data[front]=data;
+//            rear=0;
+//            return;
+//        }
         if (isfull()){
             System.out.println("queue is full");
 
@@ -35,7 +41,6 @@ public class Custumqueues {
     private boolean isempty() {
         return front==-1||front== data.length;
     }
-
     private boolean isfull() {
         return rear==data.length-1;
     }
