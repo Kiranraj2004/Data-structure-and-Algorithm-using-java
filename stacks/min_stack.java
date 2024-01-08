@@ -20,6 +20,7 @@ public class min_stack {
         w.pop();
         w.push(47);
         System.out.println(w.getMin());
+        System.out.println(w.min);
 
 
     }
