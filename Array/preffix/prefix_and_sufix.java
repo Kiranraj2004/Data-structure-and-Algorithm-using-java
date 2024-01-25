@@ -1,4 +1,4 @@
-package Algoritham;
+package Array.preffix;
 
 
 import java.util.Arrays;

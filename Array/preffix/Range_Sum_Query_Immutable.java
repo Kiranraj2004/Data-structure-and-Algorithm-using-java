@@ -1,4 +1,4 @@
-package Array;
+package Array.preffix;
 //this is practice sum of prefix and suffix
 import java.util.Arrays;
 
