@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Isomorphic_Strings {
     public static void main(String[] args) {
-     String s="foo";
+     String s="foa";
      String t="baa";
         System.out.println(isIsomorphic(s,t));
     }
@@ -15,8 +15,9 @@ public class Isomorphic_Strings {
                 if(temp.get(s.charAt(i))!=t.charAt(i)){
                     return false;
                 }
-            }
-            else {
+            } else if (temp.containsValue(t.charAt(i))) {
+                return false;
+            } else {
                 temp.put(s.charAt(i),t.charAt(i));
             }
         }
