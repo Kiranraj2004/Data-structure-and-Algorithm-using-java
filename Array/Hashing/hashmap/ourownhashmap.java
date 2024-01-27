@@ -17,7 +17,7 @@ class ourownhashmap {
         private int N;//number of buckets
         private LinkedList<node>buckets[];
 
-        public HashMap() {
+        public Hashmap() {
             this.N=4;
             this.buckets=new LinkedList[N];
             for (int i = 0; i <N ; i++) {
