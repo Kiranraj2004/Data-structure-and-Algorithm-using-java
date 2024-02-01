@@ -1,6 +1,5 @@
 package Array.Hashing.hashmap;
 //i solved this question in 1 hour
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class Longest_Consecutive_Sequence {
