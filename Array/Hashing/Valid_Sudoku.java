@@ -34,5 +34,7 @@ public class Valid_Sudoku {
 
             }
         }
+
+        return true;
     }
 }
