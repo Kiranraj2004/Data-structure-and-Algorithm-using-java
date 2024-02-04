@@ -1,3 +1,5 @@
+package binary_search;
+
 //https://leetcode.com/problems/binary-search/
 public class Binary_search {
  public static void main(String[] args) {
