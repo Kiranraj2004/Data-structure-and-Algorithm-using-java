@@ -1,7 +1,5 @@
 package Algoritham.Sorting;
-
 import java.util.Arrays;
-
 public class practesing_the_algoritham {
     public static void main(String[] args) {
         int[]nums={5,4,3,2,1};
