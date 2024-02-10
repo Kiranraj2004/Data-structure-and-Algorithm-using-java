@@ -1,7 +1,5 @@
 package Array.Twopointer;
-
 import java.util.*;
-
 public class Sum_3 {
     public static void main(String[] args) {
      int[]nums={-1,0,1,2,-1,-4};
