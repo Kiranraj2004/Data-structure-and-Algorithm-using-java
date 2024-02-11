@@ -1,6 +1,7 @@
+package Algoritham.sorting_algoritham;
 import java.util.Arrays;
 // merge sort for ascending order using recursion
-public class Merege_sort {
+ public class Merege_sort {
     public static void main(String[] args) {
         int[]arr={5,4,3,2,1};
         System.out.println(Arrays.toString(mergesort(arr)));

@@ -1,3 +1,5 @@
+package Algoritham.sorting_algoritham;
+
 import java.util.Arrays;
 
 public class Quick_sort {

@@ -1,3 +1,5 @@
+package Algoritham.sorting_algoritham;
+
 import java.util.Arrays;
 
 // merge sort for ascending order using recursion
