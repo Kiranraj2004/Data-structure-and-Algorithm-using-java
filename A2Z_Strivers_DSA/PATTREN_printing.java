@@ -3,7 +3,7 @@ package A2Z_Strivers_DSA;
 public class PATTREN_printing {
     public static void main(String[] args) {
         int n = 3; // Size of the diamond
-//     symmetryq21(3);
+     symmetryq21(3);
         getNumberPattern(4);
 
         // Upper half of the diamond
@@ -140,18 +140,20 @@ public class PATTREN_printing {
     public static void symmetryq21(int n) {
         // Write your code here
         for (int i = 1; i <=n ; i++) {
-            for (int j = 1; j <=n ; j++) {
-                if (i==1||i==n){
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n) {
                     System.out.print("*");
-                }
-                else if(j==1||j==n){
+                } else if (j == 1 || j == n) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
+//                    ***
+//                    * *
+//                    ***
     }
 
     public static void getNumberPattern(int n) {
@@ -163,6 +165,13 @@ public class PATTREN_printing {
             }
             System.out.println();
         }
+//        4444444
+//        4333334
+//        4322234
+//        4321234
+//        4322234
+//        4333334
+//        4444444
 
     }
 }
