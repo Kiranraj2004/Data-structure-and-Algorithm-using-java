@@ -42,7 +42,8 @@ public class Custumstack {
 
     int peak() throws Exception {
         if (isempty()){
-            throw new Exception("cant peak the stack is empty");
+//            throw new Exception("cant peak the stack is empty");
+            System.out.println("peak of stack is empty");
         }
         return data[ptr];
     }
