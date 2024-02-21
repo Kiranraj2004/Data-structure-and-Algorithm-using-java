@@ -1,6 +1,5 @@
-package stacks;
+package A2Z_Strivers_DSA.stacksandqueues;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
