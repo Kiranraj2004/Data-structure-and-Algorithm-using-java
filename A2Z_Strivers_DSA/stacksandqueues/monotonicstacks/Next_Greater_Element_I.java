@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Stack;
 
-public interface Next_Greater_Element_I {
+public class Next_Greater_Element_I {
     public static void main(String[] args) {
         int[]arr={1,3,4,2};
         System.out.println(Arrays.toString(nextGreaterElement(new int[]{4,2,1},arr)));
