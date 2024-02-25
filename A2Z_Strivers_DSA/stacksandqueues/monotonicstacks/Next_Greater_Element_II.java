@@ -12,7 +12,6 @@ public class Next_Greater_Element_II {
     public static int[] nextGreaterElements(int[] nums) {
       int []arr=new int[nums.length];
       Arrays.fill(arr,-1);
-
         Stack<Integer> res=new Stack<>();
         for (int i = nums.length*2-1; i >=0; i--) {
             int index=i%nums.length;
