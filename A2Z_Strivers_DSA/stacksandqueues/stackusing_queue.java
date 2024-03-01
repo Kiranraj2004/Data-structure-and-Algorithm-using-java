@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class stackusing_queue {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
        stack obj=new stack();
        obj.push(3);
         obj.push(2);
@@ -25,7 +25,10 @@ class stack{
     int pop(){
         return arr.remove();
     }
-    public int top() {
+    public int top() throws Exception {
+       if (arr.isEmpty()) {
+               throw new Exception("cant pop the stack is empty");
+       }
        return arr.peek();
     }
 
