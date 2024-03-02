@@ -28,7 +28,6 @@ public class Postfix_to_Infix {
                 res.append(postfix.charAt(i));
                 arr.push(res.toString());
             }
-
         }
         return arr.pop();
     }

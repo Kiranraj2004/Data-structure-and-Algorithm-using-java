@@ -4,13 +4,22 @@ import java.util.Stack;
 
 public class infix_to_prefix {
     public static void main(String[] args) {
-        String s="(p+q)*(c-d)";
+        String s="(A-B/C)*(A/K-L)";
         System.out.println(infixtoprefix(s));
     }
     public static String infixtoprefix(String q){
         StringBuffer a=new StringBuffer(q);
-        String s=a.reverse().toString();
-        System.out.println(s);
+       a.reverse();
+        for (int i = 0; i <a.length() ; i++) {
+            if(a.charAt(i)==')'){
+                a.setCharAt(i,'(');
+            }
+           else if(a.charAt(i)=='('){
+                a.setCharAt(i,')');
+            }
+        }
+        System.out.println(a);
+        String s=a.toString();
         Stack<Character>res=new Stack<>();
         StringBuffer ans=new StringBuffer();
 //        there we are going to by reverse order
@@ -19,28 +28,20 @@ public class infix_to_prefix {
             if (operator.indexOf(s.charAt(i))==-1){
                 ans.append(s.charAt(i));
             }
-            else if(s.charAt(i)==')'){
-                res.push(')');
-            }
             else if(s.charAt(i)=='('){
-                while(res.peek()!=')'){
+                res.push('(');
+            }
+            else if(s.charAt(i)==')'){
+                while(res.peek()!='('){
                     ans.append(res.pop());
                 }
                 res.pop();
             }
             else{
-                if (res.isEmpty()){
-                    res.push(s.charAt(i));
-                }
-                else if(Prec(s.charAt(i))>=Prec(res.peek())){
-                    res.push(s.charAt(i));
-                }
-                else{
-                    while (!res.isEmpty()&&Prec(s.charAt(i))>Prec(res.peek())){
+                    while (!res.isEmpty()&&Prec(s.charAt(i))<Prec(res.peek())){
                         ans.append(res.pop());
                     }
                     res.push(s.charAt(i));
-                }
             }
         }
         while (!res.isEmpty()){
