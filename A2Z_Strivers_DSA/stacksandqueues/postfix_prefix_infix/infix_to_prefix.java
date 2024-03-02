@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class infix_to_prefix {
     public static void main(String[] args) {
-        String s="(A-B/C)*(A/K-L)";
+        String s="(2+1)*(9/8+2)";
         System.out.println(infixtoprefix(s));
     }
     public static String infixtoprefix(String q){
