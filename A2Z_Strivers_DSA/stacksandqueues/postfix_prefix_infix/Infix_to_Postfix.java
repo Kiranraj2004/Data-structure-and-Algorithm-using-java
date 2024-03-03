@@ -38,13 +38,11 @@ public class Infix_to_Postfix {
         return result.toString();
     }
     static int Prec(char ch) {
-        int i = switch (ch) {
+        return switch (ch) {
             case '+', '-' -> 1;
             case '*', '/' -> 2;
             case '^' -> 3;
             default -> -1;
         };
-        return i;
     }
-
 }

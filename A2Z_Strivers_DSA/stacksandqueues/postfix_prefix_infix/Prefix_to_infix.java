@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Prefix_to_infix {
     public static void main(String[] args) {
-        String s="*-A/BC-/AKL";
+        String s="*-a/bc-/dkl";
         System.out.println(prefixtoinfix(s));
     }
     public static String prefixtoinfix(String prefix){
