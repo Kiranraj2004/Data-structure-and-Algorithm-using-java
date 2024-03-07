@@ -6,11 +6,15 @@ public class lcm {
     }
     public static int LCM(int a,int b){
         int min= Math.min(a, b);
-        while (true){
-            if (min%a==0&&min%b==0){
-                return min;
-            }
+//        while (true){
+//            if (min%a==0&&min%b==0){
+//                return min;
+//            }
+//            min++;
+//        }
+        while (min%a!=0||min%b!=0){
             min++;
         }
+        return min;
     }
 }
