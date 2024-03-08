@@ -42,5 +42,6 @@ public class Min_Stack {
         obj.push(-3);
         obj.pop();
         System.out.println(obj.getMin());
+        System.out.println(obj.top());
     }
 }

@@ -22,7 +22,6 @@ public class Valid_Parentheses {
                         return false;
                     }
                 }
-
                else  if (s.charAt(i)==']'){
                     if (res.peek()=='['){
                         res.pop();
@@ -31,7 +30,6 @@ public class Valid_Parentheses {
                         return false;
                     }
                 }
-
                 else if (s.charAt(i)=='}'){
                     if (res.peek()=='{'){
                         res.pop();

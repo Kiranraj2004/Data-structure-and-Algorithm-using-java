@@ -6,7 +6,7 @@ import java.util.Stack;
 public class Next_Greater_Element_II {
     public static void main(String[] args) {
         int[]nums={5,1,1,1,1};
-        System.out.println(Arrays.toString(bruteforcemethod(nums)));
+//        System.out.println(Arrays.toString(bruteforcemethod(nums)));
         System.out.println(Arrays.toString(nextGreaterElements(nums)));
     }
     public static int[] nextGreaterElements(int[] nums) {

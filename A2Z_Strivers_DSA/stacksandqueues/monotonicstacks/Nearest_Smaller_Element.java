@@ -7,8 +7,8 @@ import java.util.Stack;
 
 public class Nearest_Smaller_Element {
     public static void main(String[] args) {
-//        int[]nums={4,5,2,10,8};
-        ArrayList<Integer>nums=new ArrayList<>(Arrays.asList(4,5,2,10,8));
+//        int[]nums={1,5,2,10,8};
+        ArrayList<Integer>nums=new ArrayList<>(Arrays.asList(1,5,2,10,8));
         System.out.println(prevSmaller(nums));
 }
     public static ArrayList<Integer> prevSmaller(ArrayList<Integer> A) {
