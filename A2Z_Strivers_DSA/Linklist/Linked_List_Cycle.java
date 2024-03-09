@@ -8,10 +8,10 @@ public class Linked_List_Cycle {
 //    https://takeuforward.org/data-structure/detect-a-cycle-in-a-linked-list/
 //O(n)time complexity and
 //    //    o(1)space complexity  in  worst case
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(Node head) {
         if(head==null)return false;
-        ListNode fast=head;
-        ListNode slow=head;
+        Node fast=head;
+        Node slow=head;
         while(fast!=null&&fast.next!=null){
             slow=slow.next;
             fast=fast.next.next;
@@ -21,8 +21,8 @@ public class Linked_List_Cycle {
     }
 //    this is using brute force method which uses O(n)time complexity and
 //    o(n)space complexity  in  worst case
-    public boolean hasCyclea(ListNode head) {
-        HashSet<ListNode>res=new HashSet<>();
+    public boolean hasCyclea(Node head) {
+        HashSet<Node>res=new HashSet<>();
         while(head!=null){
             if(res.contains(head)){
                 return true;
