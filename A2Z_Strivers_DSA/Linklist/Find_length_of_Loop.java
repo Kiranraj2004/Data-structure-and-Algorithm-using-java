@@ -30,17 +30,11 @@ public class Find_length_of_Loop {
             slow=slow.next;
             fast=fast.next.next;
             if (slow==fast){
-                int count=0;
-                Node entry=head;
-                while(entry!=slow){
-                   entry= entry.next;
-                    slow=slow.next;
+                int count =0;
+                do{
                     count++;
-                }
-                while(entry!=fast){
-                    entry=entry.next;
-                    count++;
-                }
+                    fast=fast.next;
+                }while(fast!=slow);
                 return count;
             }
         }
