@@ -21,5 +21,17 @@ public class Intersection_of_Two_Linked_Lists {
 //            temp2=temp2.next;
 //        }
 //     return null;
+
+//        while(headA!=null){
+//            ListNode tempB=headB;
+//            while(tempB!=null){
+//                if(tempB==headA){
+//                    return tempB;
+//                }
+//                tempB=tempB.next;
+//            }
+//            headA=headA.next;
+//        }
+//        return null;
 //    }
 }
