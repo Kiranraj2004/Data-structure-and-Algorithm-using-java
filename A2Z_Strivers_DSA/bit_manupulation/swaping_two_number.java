@@ -4,7 +4,11 @@ public class swaping_two_number {
     public static void main(String[] args) {
         int a=1;
         int b=3;
-//        before swaping
+//        using another variable
+//        int temp=a;
+//        a=b;
+//        b=temp;
+//        before swapping
         System.out.println("before  a ="+a);
         System.out.println(" before b="+b);
         a=a^b;
@@ -15,5 +19,9 @@ public class swaping_two_number {
 //        first =a=a^b
 //        second b=a^b here a=(a^b)so that a^b=(a^b)^b b^b=0 therefore b=a;
 //        thridly a=a^b here a=(a^b) and b=a so that a^b =(a^b)^a a^a=0 a=b;
+//   a=a-b;
+//   b=a+b;
+//   a=b-a;
+//        this is another method to swap two number
     }
 }
