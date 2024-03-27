@@ -6,6 +6,14 @@ public class Missing_number {
         System.out.println(missingNumber(arr));
     }
     public static int missingNumber(int[] nums) {
+// this take O(N) TC and O(1)SC
+//        int n = nums.length;
+//        int expectedSum = n * (n + 1) / 2;
+//        int actualSum = 0;
+//        for (int num : nums) {
+//            actualSum += num;
+//        }
+//        return expectedSum - actualSum;
     int x=0;
     for(int i:nums){
         x^=i;
