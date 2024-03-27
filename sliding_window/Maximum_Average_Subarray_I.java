@@ -1,4 +1,4 @@
-package Array.sliding_window;
+package sliding_window;
 
 public class Maximum_Average_Subarray_I {
     public static void main(String[] args) {

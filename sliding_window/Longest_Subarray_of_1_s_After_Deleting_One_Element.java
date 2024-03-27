@@ -1,4 +1,4 @@
-package Array.sliding_window;
+package sliding_window;
 
 public class Longest_Subarray_of_1_s_After_Deleting_One_Element {
     public static void main(String[] args) {

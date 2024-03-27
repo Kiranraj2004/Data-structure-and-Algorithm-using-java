@@ -1,4 +1,4 @@
-package Array.sliding_window;
+package sliding_window;
 //this problem takes O(n)
 public class slidewindowmethod {
     public static void main(String[] args) {

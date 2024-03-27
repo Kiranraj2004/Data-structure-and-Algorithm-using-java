@@ -1,4 +1,4 @@
-package Array.sliding_window;
+package sliding_window;
 
 public class Max_Consecutive_Ones_III {
     public static void main(String[] args) {
