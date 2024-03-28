@@ -46,12 +46,12 @@ public class Single_Number_II {
 //        }
 //    return ans;
 //         which takes O(n longn+n)TC and O(1) SC
-//        Arrays.sort(nums);
-//        for (int i = 1; i <nums.length ; i+=3) {
-//            if (nums[i-1]!=nums[i]){
-//                return nums[i-1];
-//            }
-//        }
-//        return nums[nums.length-1];
+        Arrays.sort(nums);
+        for (int i = 1; i <nums.length ; i+=3) {
+            if (nums[i-1]!=nums[i]){
+                return nums[i-1];
+            }
+        }
+        return nums[nums.length-1];
     }
 }
