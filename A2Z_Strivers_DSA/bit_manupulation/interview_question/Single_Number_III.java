@@ -6,7 +6,6 @@ public class Single_Number_III {
     public static void main(String[] args) {
         int []arr={3,5};
         System.out.println(Arrays.toString(singleNumber(arr)));
-
     }
     public static int[] singleNumber(int[] arr) {
         int xor=0;

@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class perfect_class_name {
     public static void main(String[] args) {
-        String s="Length of Longest Subarray With at Most K Frequency";
+        String s="Count Subarrays Where Max Element Appears at Least K Times";
         underscore(s);
 
     }

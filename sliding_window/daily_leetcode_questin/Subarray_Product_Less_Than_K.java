@@ -1,4 +1,4 @@
-package sliding_window;
+package sliding_window.daily_leetcode_questin;
 
 public class Subarray_Product_Less_Than_K {
     public static void main(String[] args) {

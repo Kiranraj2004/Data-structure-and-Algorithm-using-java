@@ -1,4 +1,4 @@
-package sliding_window;
+package sliding_window.daily_leetcode_questin;
 
 import java.util.HashMap;
 
