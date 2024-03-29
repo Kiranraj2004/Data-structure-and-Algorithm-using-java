@@ -1,9 +1,6 @@
 package A2Z_Strivers_DSA.bit_manupulation.interview_question;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-
 public class Single_Number_II {
     public static void main(String[] args) {
         int[]arr={2,2,2,3};
@@ -53,5 +50,8 @@ public class Single_Number_II {
             }
         }
         return nums[nums.length-1];
+
+
+
     }
 }

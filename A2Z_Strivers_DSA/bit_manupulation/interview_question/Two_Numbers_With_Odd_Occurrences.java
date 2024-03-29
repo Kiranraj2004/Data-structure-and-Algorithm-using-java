@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Two_Numbers_With_Odd_Occurrences {
     public static void main(String[] args) {
-        int []arr={2,2,4,4,1,3};
+        int []arr={2,2,4,4,3,5};
         System.out.println(Arrays.toString(twoOddNum(arr)));
     }
     public static int[] twoOddNum(int []arr){
