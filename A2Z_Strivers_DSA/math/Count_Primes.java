@@ -7,7 +7,7 @@ public class Count_Primes {
         System.out.println(countPrimes(2));
     }
 
-//which takes O(sqrt(n))TC and O(depends on number)
+//which takes O(sqrt(n)+log(n))TC and O(depends on number)
     public static List< Integer > optimalcountPrimes(int n) {
         // Write your code here.
         List<Integer>res=new ArrayList<>();
@@ -72,5 +72,32 @@ public class Count_Primes {
             }
         }
         return count == 2;
+    }
+
+//    most optimal way using Sieve of Eratosthenes which take O(Nlog(log(n)+O(sqrt(n))TC
+
+    public static List<Integer> using_sieve_of_erathosthenes(int n){
+        boolean[]arr=new boolean[n+1];
+        Arrays.fill(arr,true);
+        for (int i = 2; i*i <=n ; i++) {
+            if(arr[i]){
+                for (int j =i*i; j<=n ; j+=i) {
+                    arr[j]=false;
+                }
+            }
+        }
+        List<Integer>res=new ArrayList<>();
+        for(int i=1;i*i<=n;i++){
+            if(n%i==0){
+                if(arr[i]){
+                    res.add(i);
+                }
+                if(n/i!=i&&arr[n/i]){
+                    res.add(n/i);
+                }
+            }
+        }
+        Collections.sort(res);
+        return res;
     }
 }

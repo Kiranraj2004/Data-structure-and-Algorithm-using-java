@@ -1,4 +1,4 @@
-package sliding_window.daily_leetcode_questin;
+package leetcodedailyquestion.march2024;
 
 public class Subarray_Product_Less_Than_K {
     public static void main(String[] args) {

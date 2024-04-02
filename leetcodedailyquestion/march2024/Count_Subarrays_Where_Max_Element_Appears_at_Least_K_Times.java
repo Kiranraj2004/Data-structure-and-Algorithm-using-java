@@ -1,4 +1,4 @@
-package sliding_window.daily_leetcode_questin;
+package leetcodedailyquestion.march2024;
 
 import java.util.HashMap;
 
