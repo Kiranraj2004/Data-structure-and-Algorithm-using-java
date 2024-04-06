@@ -1,3 +1,5 @@
+package binary_search;
+
 //https://leetcode.com/problems/arranging-coins/description/
 public class Arranging_Coins {
     public static void main(String[] args) {
