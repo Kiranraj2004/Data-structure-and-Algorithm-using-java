@@ -8,7 +8,7 @@ public class Sum_triangle_in_array {
         sumintriangle(arr);
     }
     static void sumintriangle(int[]arr){
-        if (arr.length-1<0){
+        if (arr.length==0){
             return;
         }
         int[] temp=new int[arr.length-1];
