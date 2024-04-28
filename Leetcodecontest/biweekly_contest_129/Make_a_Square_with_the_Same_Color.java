@@ -10,15 +10,12 @@ public class Make_a_Square_with_the_Same_Color {
         System.out.println(canMakeSquare(grid));
 
     }
-
     public static boolean canMakeSquare(char[][] grid) {
-
-
             int a=0;
             if(grid[1][0]==grid[1][1])a++;
             if(grid[0][0]==grid[1][1])a++;
             if(grid[0][1]==grid[1][1])a++;
-            if(a==2||a==0){
+            if(a==2||a==0||a==3){
                 return true;
             }
 
