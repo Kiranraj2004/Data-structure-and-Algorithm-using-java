@@ -5,7 +5,7 @@ import java.util.Arrays;
 // merge sort for ascending order using recursion
 public class Merege_sort_using_indecis {
     public static void main(String[] args) {
-        int[]arr={5,4,3,2,1};
+        int[]arr={10,19,7,2,9,8};
         mergesort(arr,0,arr.length);
         System.out.println(Arrays.toString(arr));
     }
@@ -17,6 +17,7 @@ public class Merege_sort_using_indecis {
        mergesort(arr,s,mid);
        mergesort(arr,mid,e);
         merge(arr,s,mid,e);
+        System.out.println(Arrays.toString(arr));
     }
 
     private static void merge(int[] arr,int s,int mid,int e) {
