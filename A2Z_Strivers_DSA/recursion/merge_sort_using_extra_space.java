@@ -2,12 +2,13 @@ package A2Z_Strivers_DSA.recursion;
 import java.util.*;
 public class merge_sort_using_extra_space {
     public static void main(String[] args) {
-        int []arr={10,19,7,2,9,8};
+        int []arr={};
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(merge(arr)));
 
     }
     static public int[] merge(int[]arr){
+        if (arr.length==0)return new int[0];
         if (arr.length==1){
             return arr;
         }

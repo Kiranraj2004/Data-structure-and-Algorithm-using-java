@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class merge_sort_without_using_extra_space {
     public static void main(String[] args) {
-        int []arr={10,19,7,2,9,8};
+        int []arr={1,2,3,4};
         System.out.println(Arrays.toString(arr));
         merge(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
