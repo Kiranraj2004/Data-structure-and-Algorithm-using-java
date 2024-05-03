@@ -1,4 +1,4 @@
-package Greedy;
+package geeksforgeeks.Array;
 
 public class Increasing_Triplet_Subsequence {
     public static void main(String[] args) {
