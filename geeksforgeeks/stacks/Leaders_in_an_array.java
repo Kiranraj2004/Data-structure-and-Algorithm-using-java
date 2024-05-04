@@ -1,4 +1,4 @@
-package geeksforgeeks.Array.stacks;
+package geeksforgeeks.stacks;
 import  java.util.*;
 public class Leaders_in_an_array {
     public static void main(String[] args) {

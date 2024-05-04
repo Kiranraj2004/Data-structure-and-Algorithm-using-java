@@ -8,6 +8,8 @@ public class Find_duplicates_in_an_array {
         System.out.println(duplicates(arr,arr.length));
 
     }
+
+//    O(2n)time complexity O(N) space complexity
     public static ArrayList<Integer> duplicates(int arr[], int n) {
         // code here
         int[] temp=new int[n];
