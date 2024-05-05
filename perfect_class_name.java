@@ -2,7 +2,7 @@ import java.util.HashSet;
 
 public class perfect_class_name {
     public static void main(String[] args) {
-        String s="Delete all occurrences of a given key in a doubly linked list";
+        String s="Minimum Number of Operations to Make Word K-Periodic";
         underscore(s);
 
     }
