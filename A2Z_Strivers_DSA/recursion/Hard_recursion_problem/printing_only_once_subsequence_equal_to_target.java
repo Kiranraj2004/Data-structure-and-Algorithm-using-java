@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.recursion;
+package A2Z_Strivers_DSA.recursion.Hard_recursion_problem;
 
 import java.util.ArrayList;
 import java.util.List;

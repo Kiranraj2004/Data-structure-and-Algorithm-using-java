@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.recursion;
+package A2Z_Strivers_DSA.recursion.Hard_recursion_problem;
 import java.util.*;
 public class printing_only_how_many_subsequence_equal_to_target {
     public static void main(String[] args) {
