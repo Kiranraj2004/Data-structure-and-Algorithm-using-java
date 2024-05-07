@@ -4,8 +4,12 @@ import java.util.List;
 import java.util.Stack;
 
 class ListNode{
-    int data;
+    int val;
     ListNode next;
+    ListNode(int data){
+        val=data;
+        next=null;
+    }
 }
 
 public class Remove_Nodes_From_Linked_List {
@@ -38,7 +42,7 @@ public class Remove_Nodes_From_Linked_List {
         if (res.isEmpty()){
             res.add(temp);
         }else{
-            if (res.peek().data<=temp.data){
+            if (res.peek().val<=temp.val){
                 res.add(temp);
             }
         }

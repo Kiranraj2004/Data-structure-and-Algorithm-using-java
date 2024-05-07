@@ -2,8 +2,8 @@ package A2Z_Strivers_DSA.recursion.Hard_recursion_problem;
 import java.util.*;
 public class Combination_Sum {
     public static void main(String[] args) {
-        int[]arr={2,3,6,7};
-        System.out.println(combinationSum(arr,7));
+        int[]arr={1,2,3};
+        System.out.println(combinationSum(arr,4));
 
     }
     public static  List<List<Integer>> combinationSum(int[] candidates, int target) {
