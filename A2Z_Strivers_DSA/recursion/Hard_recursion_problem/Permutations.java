@@ -7,54 +7,61 @@ public class Permutations {
         int []nums={1,3,2};
         System.out.println(permute(nums));
     }
-    public  static List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>>res=new ArrayList<>();
-        boolean []temp=new boolean[nums.length];
-        helper(nums,temp,res,new ArrayList<Integer>());
-        return res;
-    }
 
-    private static void helper(int[] nums, boolean[] temp, List<List<Integer>> res, ArrayList<Integer> i) {
-        if (i.size()==nums.length){
-            if (!res.contains(new ArrayList<>(i)))
-                   res.add(new ArrayList<>(i));
-            return;
-        }
-        for (int j = 0; j <nums.length ; j++) {
-            if (temp[j]==false){
-                i.add(nums[j]);
-                temp[j]=true;
-                helper(nums,temp,res,i);
-                i.remove(i.size()-1);
-                temp[j]=false;
-            }
-        }
-    }
-//public static List<List<Integer>> permute(int[] nums) {
-//    List<List<Integer>> result = new ArrayList<>();
-//    permutea(nums, 0, result);
-//    return result;
-//}
-//
-//  public static   void permutea(int[] nums, int start, List<List<Integer>> result) {
-//        if (start == nums.length-1) {
-//            ArrayList<Integer> integerList = new ArrayList<>();
-//            for (int value : nums) {
-//                integerList.add(value);
-//            }
-//            result.add(integerList);
-//        } else {
-//            for (int i = start; i < nums.length; i++) {
-//                swap(nums, start, i);
-//                permutea(nums, start+1, result);
-//                swap(nums, start, i);
+    //    time complexity O(N!*N) space complexityO(3N)stack space and temp variable and to store every time you are going to use arrayList
+//    public  static List<List<Integer>> permute(int[] nums) {
+//        List<List<Integer>>res=new ArrayList<>();
+//        boolean []temp=new boolean[nums.length];
+//        helper(nums,temp,res,new ArrayList<Integer>());
+//        return res;
+//    }
+
+//    private static void helper(int[] nums, boolean[] temp, List<List<Integer>> res, ArrayList<Integer> i) {
+//        if (i.size()==nums.length){
+//            if (!res.contains(new ArrayList<>(i)))
+//                   res.add(new ArrayList<>(i));
+//            return;
+//        }
+//        for (int j = 0; j <nums.length ; j++) {
+//            if (temp[j]==false){
+//                i.add(nums[j]);
+//                temp[j]=true;
+//                helper(nums,temp,res,i);
+//                i.remove(i.size()-1);
+//                temp[j]=false;
 //            }
 //        }
 //    }
-//
-//    public static void swap(int[] nums, int i, int j) {
-//        int tmp = nums[i];
-//        nums[i] = nums[j];
-//        nums[j] = tmp;
-//    }
+
+
+//    time complexity O(N!*N) space complexityO(N)stack space
+    public  static List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>>res=new ArrayList<>();
+        helper(nums,0,res);
+       return res;
+    }
+
+    private static void helper(int[] nums, int start, List<List<Integer>> res) {
+        if (start==nums.length){
+            ArrayList<Integer>s=new ArrayList<>();
+            for(int i:nums){
+                s.add(i);
+            }
+            res.add(s);
+            return;
+        }
+        for (int i = start; i <nums.length ; i++) {
+            swap(nums,start,i);
+            helper(nums,start+1,res);
+            swap(nums,start,i);
+        }
+
+    }
+
+    private static void swap(int[] nums, int j, int i) {
+        int temp=nums[i];
+        nums[i]=nums[j];
+        nums[j]=temp;
+    }
+
 }
