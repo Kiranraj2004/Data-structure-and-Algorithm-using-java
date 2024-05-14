@@ -5,6 +5,8 @@ public class String_to_Integer_atoi {
         String s="9223372036854775808";
         System.out.println(myAtoi(s));
     }
+
+//    time complexity of O(N) and space complexity of O(1)
     public static int myAtoi(String s) {
         boolean d=false;
         for (int i = 0; i <s.length() ; i++) {
