@@ -8,7 +8,7 @@ public class indorder_iterative {
 
     }
 //    public List<Integer> inorderTraversal(TreeNode root) {
-//        Stack<TreeNode>a=new Stack<TreeNode>();
+//        Stack<TreeNode>a=new Stack<TreeNode>();2
 //        List<Integer>res=new ArrayList<>();
 //        while(root!=null||!a.isEmpty()){
 //            while(root!=null){
@@ -22,4 +22,8 @@ public class indorder_iterative {
 //        return res;
 //
 //    }
+
+
+
+
 }
