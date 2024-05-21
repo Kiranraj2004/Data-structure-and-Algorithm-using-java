@@ -1,4 +1,4 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
 public class Diameter_of_Binary_Tree {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
 import java.util.*;
 

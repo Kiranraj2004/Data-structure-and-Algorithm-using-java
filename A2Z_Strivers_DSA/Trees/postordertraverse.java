@@ -1,4 +1,4 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
 public class postordertraverse {
     static int index=-1;

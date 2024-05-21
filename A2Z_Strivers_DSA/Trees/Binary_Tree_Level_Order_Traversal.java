@@ -1,6 +1,4 @@
-package Trees;
-
-import java.util.*;
+package A2Z_Strivers_DSA.Trees;
 
 public class Binary_Tree_Level_Order_Traversal {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
-public class countofnodes {
+public class inordertraverse {
     static int index=-1;
     public static Node createnode(int []arr){
         index++;
@@ -16,14 +16,13 @@ public class countofnodes {
     public static void main(String[] args) {
         int[]arr={1,2,-1,-1,4,5,-1,6,7,8,-1};
         Node root=createnode(arr);
-        System.out.println(count(root));
+        inorder(root);
     }
-    public static int count(Node root){
-        if (root==null){
-            return 0;
-        }
-        int left=count(root.left);
-        int right=count(root.right);
-        return left+right+1;
+
+    private static void inorder(Node root) {
+        if (root==null)return;
+        inorder(root.left);
+        System.out.print(root.data +" ");
+        inorder(root.right);
     }
 }

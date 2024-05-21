@@ -1,4 +1,4 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
 public class Binary_Tree_Maximum_Path_Sum {
     public static void main(String[] args) {
@@ -15,9 +15,9 @@ public class Binary_Tree_Maximum_Path_Sum {
 //        if (root==null){
 //            return 0;
 //        }
-//        int left= height(root.left,res);
-//        int right= height(root.right,res);
-//        if (left+right+root.val>res[0])res[0]=left+right;
-//        return left+right+root.val;
+//        int left= Math.max(0,height(root.left,res));
+//        int right= Math.max(0,height(root.right,res));
+//        if (left+right+root.val>res[0])res[0]=left+right+root.val;
+//        return Math.max(left,right)+root.val;
 //    }
 }

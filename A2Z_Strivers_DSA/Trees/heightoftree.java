@@ -1,6 +1,6 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 
-public class preordertraversal {
+public class heightoftree {
     static int index=-1;
     public static Node createnode(int []arr){
         index++;
@@ -16,13 +16,14 @@ public class preordertraversal {
     public static void main(String[] args) {
         int[]arr={1,2,-1,-1,4,5,-1,6,7,8,-1};
         Node root=createnode(arr);
-        preorder(root);
-
+        System.out.println(height(root));
     }
-    public static void preorder(Node root){
-        if (root==null)return;
-        System.out.print(root.data +" ");
-        preorder(root.left);
-        preorder(root.right);
+    public static int height(Node root){
+        if (root==null){
+            return 0;
+        }
+        int left= height(root.left);
+        int right= height(root.right);
+        return Math.max(left,right)+1;
     }
 }

@@ -1,5 +1,5 @@
-package Trees;
-import java.util.*;
+package A2Z_Strivers_DSA.Trees;
+
 public class pretraversal_using_itterative {
     public static void main(String[] args) {
 

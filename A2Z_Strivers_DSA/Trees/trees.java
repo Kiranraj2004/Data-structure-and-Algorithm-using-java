@@ -1,6 +1,18 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
+class Node{
+    int data;
+    Node left;
+    Node right;
+    Node(int data){
+        this.data=data;
+        this.left=null;
+        this.right=null;
+    }
+}
 
-public class inordertraverse {
+
+
+public class trees {
     static int index=-1;
     public static Node createnode(int []arr){
         index++;
@@ -16,13 +28,8 @@ public class inordertraverse {
     public static void main(String[] args) {
         int[]arr={1,2,-1,-1,4,5,-1,6,7,8,-1};
         Node root=createnode(arr);
-        inorder(root);
-    }
+        System.out.println(root.data);
 
-    private static void inorder(Node root) {
-        if (root==null)return;
-        inorder(root.left);
-        System.out.print(root.data +" ");
-        inorder(root.right);
+
     }
 }

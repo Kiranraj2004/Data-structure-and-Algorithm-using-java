@@ -1,18 +1,6 @@
-package Trees;
-class Node{
-    int data;
-    Node left;
-    Node right;
-    Node(int data){
-        this.data=data;
-        this.left=null;
-        this.right=null;
-    }
-}
+package A2Z_Strivers_DSA.Trees;
 
-
-
-public class trees {
+public class countofnodes {
     static int index=-1;
     public static Node createnode(int []arr){
         index++;
@@ -28,8 +16,14 @@ public class trees {
     public static void main(String[] args) {
         int[]arr={1,2,-1,-1,4,5,-1,6,7,8,-1};
         Node root=createnode(arr);
-        System.out.println(root.data);
-
-
+        System.out.println(count(root));
+    }
+    public static int count(Node root){
+        if (root==null){
+            return 0;
+        }
+        int left=count(root.left);
+        int right=count(root.right);
+        return left+right+1;
     }
 }

@@ -1,4 +1,4 @@
-package Trees;
+package A2Z_Strivers_DSA.Trees;
 //https://takeuforward.org/data-structure/check-if-the-binary-tree-is-balanced-binary-tree/
 public class check_balance_tree {
     public static void main(String[] args) {
