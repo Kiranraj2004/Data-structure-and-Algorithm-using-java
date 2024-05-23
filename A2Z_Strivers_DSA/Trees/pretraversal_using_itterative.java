@@ -7,7 +7,7 @@ public class pretraversal_using_itterative {
 
 //    tc O(N)
 //        sc O(N)
-//    public List<Intege r> preorderTraversal(TreeNode root) {
+//    public List<Integer> preorderTraversal(TreeNode root) {
 //        List<Integer>res=new ArrayList<>();
 //        if (root==null) return res;
 //        Stack<TreeNode>r=new Stack<TreeNode>();
