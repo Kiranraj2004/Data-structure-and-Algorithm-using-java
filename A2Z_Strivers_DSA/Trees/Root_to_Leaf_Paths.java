@@ -18,13 +18,12 @@ public class Root_to_Leaf_Paths {
 
     private static void helper(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> temp, Node root) {
         if (root==null){
-
-            if (!res.contains(new ArrayList<>(temp))){
-                res.add(new ArrayList<>(temp));
-            }
             return;
         }
         temp.add(root.data);
+        if (root.left == null && root.right == null) {
+            res.add(new ArrayList<>(temp));
+        }
         helper(res,temp,root.left);
         helper(res,temp,root.right);
         temp.remove(temp.size()-1);
