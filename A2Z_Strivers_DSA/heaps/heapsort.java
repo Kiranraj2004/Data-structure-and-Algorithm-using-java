@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class heapsort {
     public static void main(String[] args) {
-        int[]arr={-5,-2};
+        int[]arr={1,2,3,4,2,1};
         System.out.println(Arrays.toString(arr));
+
         sort(arr);
         System.out.println(Arrays.toString(arr));
 
@@ -13,12 +14,15 @@ public class heapsort {
 //    TC:O(NlogN)
 //    sc :O(1)
     public static void sort(int[]arr){
+        for (int i = arr.length/2-1; i >=0 ; i--) {
+            hepify(arr,i, arr.length-1);
+        }
         int n=arr.length-1;
-        while(n>0){
-            hepify(arr,0,n);
+        while(n>1){
             int temp=arr[n];
-        arr[n]=arr[0];
-        arr[0]=temp;
+            arr[n]=arr[0];
+            arr[0]=temp;
+            hepify(arr,0,n-1);
         n--;
         }
 
@@ -37,6 +41,7 @@ public class heapsort {
             int temp=arr[i];
             arr[i]=arr[largest];
             arr[largest]=temp;
+            hepify(arr,largest,n);
         }
     }
 }
