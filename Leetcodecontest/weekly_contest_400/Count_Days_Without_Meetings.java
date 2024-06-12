@@ -10,6 +10,23 @@ public class Count_Days_Without_Meetings {
         };
         System.out.println(countDays(10,m));
 
+
+        String main="hellowold";
+        String substring="world";
+        for (int i = 0; i <main.length(); i++) {
+            if (main.charAt(i)==substring.charAt(0)){
+                int count=0;
+                while(count+i<main.length() &&count<substring.length()&& main.charAt(count+i)==substring.charAt(count)){
+                    count++;
+                }
+                if (count==substring.length()){
+                    System.out.println(i);
+                }
+
+            }
+            System.out.println("substring not found");
+        }
+
     }
     public static   int countDays(int days, int[][] meetings) {
         int count=0;
