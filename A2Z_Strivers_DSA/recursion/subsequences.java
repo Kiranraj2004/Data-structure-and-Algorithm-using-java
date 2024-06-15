@@ -11,7 +11,7 @@ public class subsequences {
     }
     public static void sub(int[]arr,int index,ArrayList<Integer> res){
         if(index>=arr.length){
-            System.out.println(res);
+            System.out.print(res);
             return;
         }
         res.add(arr[index]);
