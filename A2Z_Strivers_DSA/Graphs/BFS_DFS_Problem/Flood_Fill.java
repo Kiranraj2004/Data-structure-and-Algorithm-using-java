@@ -26,13 +26,13 @@ public class Flood_Fill {
                 temp.add(new int[]{r-1,c});
 
             }
-            if (r+1<image.length&&image[r+1][c]==1){
+            if (r+1<image.length&&image[r+1][c]==start){
                 temp.add(new int[]{r+1,c});
             }
-            if (c-1>=0&&image[r][c-1]==1){
+            if (c-1>=0&&image[r][c-1]==start){
                 temp.add(new int[]{r,c-1});
             }
-            if (c+1<image[0].length&&image[r][c+1]==1){
+            if (c+1<image[0].length&&image[r][c+1]==start){
                 temp.add(new int[]{r,c+1});
             }
         }
