@@ -64,6 +64,9 @@ public class Matrix_01 {
 //        }
 //        return count;
 //    }
+
+//    Time Complexity: O(NxM + NxMx4) ~ O(N x M) same for space complexity
+    
 public static int[][] updateMatrix1(int[][] mat) {
         int m=mat.length;
         int n=mat[0].length;
