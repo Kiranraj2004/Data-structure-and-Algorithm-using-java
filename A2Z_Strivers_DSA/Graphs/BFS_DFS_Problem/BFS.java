@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.Graphs;
+package A2Z_Strivers_DSA.Graphs.BFS_DFS_Problem;
 
 import java.util.*;
 
