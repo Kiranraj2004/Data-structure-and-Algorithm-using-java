@@ -8,7 +8,6 @@ public class Shortest_path_in_Undirected_Graph {
     public static void main(String[] args) {
 
     }
-    O(n+n+m)
     public int[] shortestPath(int[][] edges,int n,int m ,int src) {
         int []distance=new int[n];
         Arrays.fill(distance,-1);
