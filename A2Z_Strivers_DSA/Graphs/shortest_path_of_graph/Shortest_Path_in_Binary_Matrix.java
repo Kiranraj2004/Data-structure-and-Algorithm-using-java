@@ -50,7 +50,6 @@ public class Shortest_Path_in_Binary_Matrix {
                 }
             }
         }
-
         return -1;
     }
 }
