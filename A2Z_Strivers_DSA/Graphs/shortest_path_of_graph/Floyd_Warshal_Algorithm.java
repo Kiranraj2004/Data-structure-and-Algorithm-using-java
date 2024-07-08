@@ -2,7 +2,7 @@ package A2Z_Strivers_DSA.Graphs.shortest_path_of_graph;
 
 public class Floyd_Warshal_Algorithm {
     public static void main(String[] args) {
-
+        System.out.println();
     }
     public void shortest_distance(int[][] matrix)
     {
