@@ -10,7 +10,7 @@ public class Bellman_Ford_Algorithm {
         Arrays.fill(distance,(int)1e8);
         distance[S]=0;
         int i=0;
-        while(i<V){
+        while(i<V-1){
             for(ArrayList<Integer>adj:edges){
                 int u=adj.get(0);
                 int v=adj.get(1);
