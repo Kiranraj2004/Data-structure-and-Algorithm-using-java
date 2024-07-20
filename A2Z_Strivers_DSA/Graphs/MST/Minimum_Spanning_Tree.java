@@ -21,27 +21,25 @@ public class Minimum_Spanning_Tree {
         }
      }
     static int spanningTree(int V, int E, List<List<int[]>> adj) {
-        int[] distance=new int[V];
-        Arrays.fill(distance, (int) 1e8);
-        distance[0]=0;
-        Queue<Integer>q=new LinkedList<>();
-        q.add(0);
-        while(!q.isEmpty()){
-            int element=q.poll();
-            for (int []i:adj.get(element)) {
-                int v=i[0];
-                int dist=i[1];
-                if (distance[v]>dist){
-                    distance[v]=dist;
-                    q.add(v);
-                }
-            }
-        }
-        int sum=0;
-
-        for (int i = 0; i < distance.length ; i++) {
-            sum+=distance[i];
-        }
-        return sum;
+       boolean []visited=new boolean[V];
+       PriorityQueue<pair>q=new PriorityQueue<>((x,y)->x.dist-y.dist);
+       q.add(new pair(0,0));
+       int sum=0;
+       while(!q.isEmpty()){
+           int node=q.peek().node;
+           int dist=q.peek().dist;
+           q.poll();
+           if (visited[node])continue;
+           visited[node]=true;
+           sum+=dist;
+           for(int i[]:adj.get(node)){
+               int n=i[0];
+               int w=i[1];
+               if (!visited[n]){
+                   q.add(new pair(n,w));
+               }
+           }
+       }
+       return sum;
     }
 }
