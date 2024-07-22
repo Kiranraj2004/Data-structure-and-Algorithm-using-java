@@ -1,4 +1,4 @@
-package leetcodedailyquestion.june2024;
+package leetcodedailyquestion.july2024;
 import java.util.*;
 public class Build_a_MatrixWith_Conditions {
     public static void main(String[] args) {

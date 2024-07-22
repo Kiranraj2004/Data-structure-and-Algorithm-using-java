@@ -1,4 +1,4 @@
-package leetcodedailyquestion.june2024;
+package leetcodedailyquestion.july2024;
 
 //20/7/2024
 public class Find_Valid_Matrix_Given_Row_and_Column_Sums {
