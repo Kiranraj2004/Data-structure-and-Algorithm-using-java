@@ -25,8 +25,8 @@ public class House_Robber {
         if(dp[index]!=-1)return dp[index];
         int max=Integer.MIN_VALUE;
         for (int i = 2; i <nums.length&&index+i<nums.length ; i++) {
-            int maxrob=helper(nums,dp,index+i)+nums[index];
-            max=Math.max(max,maxrob);
+                int maxrob=helper(nums,dp,index+i)+nums[index];
+                max=Math.max(max,maxrob);
         }
         max=Math.max(max,nums[index]);
         return dp[index]=max;
