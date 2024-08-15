@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.dynamic_programing;
+package A2Z_Strivers_DSA.dynamic_programing._1d_problem;
 
 import java.util.Scanner;
 
