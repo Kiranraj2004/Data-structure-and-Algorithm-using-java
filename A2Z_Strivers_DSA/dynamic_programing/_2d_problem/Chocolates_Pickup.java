@@ -2,6 +2,8 @@ package A2Z_Strivers_DSA.dynamic_programing._2d_problem;
 
 import java.util.Arrays;
 
+import java.util.*;
+
 public class Chocolates_Pickup {
     public static void main(String[] args) {
      int [][]grid={{3,1,1},{2,5,1},{1,5,5},{2,1,1}};
