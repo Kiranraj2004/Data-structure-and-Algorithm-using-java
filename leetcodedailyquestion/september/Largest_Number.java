@@ -23,7 +23,7 @@ public class Largest_Number {
                 return order2.compareTo(order1); // Sort in descending order
             }
         });
-        Arrays.sort(strNums,(a,b)->(a+b).compareTo(b+a));
+        Arrays.sort(strNums,(a,b)->(b+a).compareTo(a+b));
 
         // If the largest number is "0", return "0"
         if (strNums[0].equals("0")) {
