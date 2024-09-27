@@ -20,14 +20,52 @@ public class Print_all_LCS_sequences {
                 dp[i][j] = Math.max(same, notsame);
             }
         }
-        System.out.println( dp[n][m]);
-        for(int[]row:dp){
-            System.out.println(Arrays.toString(row));
+         int ans=dp[n][m];
+        List<String>res=new ArrayList<>();
+        StringBuffer a=new StringBuffer();
+        for (int i = 0; i <ans ; i++) {
+            a.append('$');
         }
+        int i=n,j=m;
+        int index=ans-1;
+        helper(s,t,dp,a,index,i,j,res);
+//
+//        while(i>0&j>0){
+//            if(s.charAt(i-1)==t.charAt(j-1)){
+//                a.setCharAt(index,s.charAt(i-1));
+//                index--;
+//                i--;
+//                j--;
+//            }
+//            else if(s.charAt(i-1)>t.charAt(j-1)){
+//                i--;
+//            }
+//            else{
+//                j--;
+//            }
+//        }
+//        System.out.println(a);
+        return res;
+    }
 
-        return new ArrayList<>();
-
-
-
+    private void helper(String s, String t, int[][] dp, StringBuffer a, int index, int i, int j,List<String>res) {
+        if(i<=0||j<=0) {
+            if (index == -1&&!res.contains(a.toString())) {
+                res.add(a.toString());
+            }
+            return;
+        }
+            if(s.charAt(i-1)==t.charAt(j-1)){
+                a.setCharAt(index,s.charAt(i-1));
+               helper(s,t,dp,a,index-1,i-1,j-1,res);
+            }
+            else  {
+                if(dp[i][j-1]>=dp[i-1][j]){
+                    helper(s,t,dp,a,index,i,j-1,res);
+               }
+                if(dp[i-1][j]>=dp[i][j-1]){
+                    helper(s,t,dp,a,index,i-1,j,res);
+                }
+           }
     }
 }
