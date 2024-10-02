@@ -1,15 +1,8 @@
-package A2Z_Strivers_DSA.dynamic_programing.subset_problem;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
+package A2Z_Strivers_DSA.dynamic_programing.best_stocks;
+ import java.util.*;
+// we have buy any number of time but before buying the stocks we have to sell the previously bayed stocks
 public class Best_Time_to_Buy_and_Sell_Stock_II {
     public static void main(String[] args) {
-        Best_Time_to_Buy_and_Sell_Stock_II obj=new Best_Time_to_Buy_and_Sell_Stock_II();
-        System.out.println(obj.maxProfit(new int[]{7,1,5,3,6,4}));
-        ArrayList<Integer>a=new ArrayList<>();
-
-
 
     }
     public int maxProfit(int[] prices) {
@@ -30,7 +23,6 @@ public class Best_Time_to_Buy_and_Sell_Stock_II {
             int take=-prices[i]+helper(prices,i+1,0,dp);
             int not_take= helper(prices,i+1,1,dp);
             profit=Math.max(take,not_take);
-
         }
         else{
             int take=prices[i]+helper(prices,i+1,1,dp);
@@ -40,5 +32,4 @@ public class Best_Time_to_Buy_and_Sell_Stock_II {
         }
         return dp[i][b]= profit;
     }
-
 }

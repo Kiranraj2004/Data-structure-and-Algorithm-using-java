@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.dynamic_programing;
+package A2Z_Strivers_DSA.dynamic_programing.best_stocks;
 
 public class Best_Time_to_Buy_and_Sell_Stock {
     public static void main(String[] args) {
