@@ -3,6 +3,8 @@ package A2Z_Strivers_DSA.dynamic_programing.best_stocks;
 // we have buy any number of time but before buying the stocks we have to sell the previously bayed stocks
 public class Best_Time_to_Buy_and_Sell_Stock_II {
     public static void main(String[] args) {
+        Best_Time_to_Buy_and_Sell_Stock_II obj=new Best_Time_to_Buy_and_Sell_Stock_II();
+        System.out.println(obj.maxProfit(new int[]{1,3,2,8,4,9}));
 
     }
     public int maxProfit(int[] prices) {
