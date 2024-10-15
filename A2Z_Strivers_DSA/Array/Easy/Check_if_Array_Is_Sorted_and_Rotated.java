@@ -32,6 +32,6 @@ public class Check_if_Array_Is_Sorted_and_Rotated {
             }
         }
         if(nums[0]<nums[nums.length-1])count++;
-        return count>1;
+        return count<=1;
     }
 }
