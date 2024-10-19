@@ -9,13 +9,11 @@ public class Union_of_Two_Sorted_Arrays {
     {
         // add your code here
         HashSet <Integer> s=new HashSet<>();
-        ArrayList < Integer > Union=new ArrayList<>();
         for (int i = 0; i < n; i++)
             s.add(arr1[i]);
         for (int i = 0; i < m; i++)
             s.add(arr2[i]);
-        for (int it: s)
-            Union.add(it);
+        ArrayList<Integer> Union = new ArrayList<>(s);
         Collections.sort(Union);
         return Union;
     }
