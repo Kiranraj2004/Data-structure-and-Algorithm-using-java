@@ -1,5 +1,5 @@
 package A2Z_Strivers_DSA.Array;
-
+import java.util.*;
 //https://leetcode.com/problems/spiral-matrix/
 public class Spiral_Matrix {
     public static void main(String[] args) {
