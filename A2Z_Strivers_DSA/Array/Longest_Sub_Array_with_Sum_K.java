@@ -2,7 +2,7 @@ package A2Z_Strivers_DSA.Array;
  import java.util.HashMap;
 public class Longest_Sub_Array_with_Sum_K {
     public static void main(String[] args) {
-        System.out.println(lenOfLongSubarr1(new int[]{10,5,0,0,2,7,1,9},8,15));
+        System.out.println(lenOfLongSubarr(new int[]{-9,4,1,2},4,3));
     }
 
 //     this is used method for positive and negative number
@@ -23,7 +23,7 @@ public class Longest_Sub_Array_with_Sum_K {
             }
 
             // calculate the sum of remaining part i.e. x-k:
-            int rem = k-sum ;
+            int rem = sum-k;
 
             //Calculate the length and update maxLen:
             if (preSumMap.containsKey(rem)) {
