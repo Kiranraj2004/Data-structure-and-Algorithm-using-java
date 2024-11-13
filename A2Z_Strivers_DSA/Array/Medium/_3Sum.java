@@ -30,6 +30,30 @@ public class _3Sum {
     }
 //    TC O(n**3) SC O(2*n)
 
+    public List<List<Integer>> threeSum2(int[] nums) {
+
+        int n=nums.length;
+        Set<List<Integer>>s=new HashSet<>();
+        for (int i = 0; i <n ; i++) {
+            HashSet<Integer>map=new HashSet<>();
+            for (int j = i+1; j <n ; j++) {
+                int required=-(nums[i]+nums[j]);
+                if(map.contains(required)){
+                    List<Integer>temp=new ArrayList<>() ;
+                    temp.add(nums[i]);
+                    temp.add(nums[j]);
+                    temp.add(required);
+                    Collections.sort(temp);
+                    s.add(temp);
+                }
+                else{
+                    map.add(nums[j]);
+                }
+            }
+        }
+        return   new ArrayList<>(s);
+    }
+
 //     optimal solution
     public List<List<Integer>> threeSum1(int[] nums) {
         Arrays.sort(nums);

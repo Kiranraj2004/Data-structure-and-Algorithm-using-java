@@ -1,4 +1,4 @@
-package A2Z_Strivers_DSA.Array;
+package A2Z_Strivers_DSA.Array.Medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +36,36 @@ public class Merge_Intervals {
             }
         }
        int [][]res=new int[temp.size()][2];
+        for (int i = 0; i <temp.size() ; i++) {
+            r=temp.get(i);
+            res[i][0]=r.get(0);
+            res[i][1]=r.get(1);
+        }
+        return res;
+    }
+
+    public int[][] merge1(int[][] arr) {
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
+        ArrayList<ArrayList<Integer>>temp=new ArrayList<>();
+        ArrayList<Integer>r=new ArrayList<>();
+        r.add(arr[0][0]);
+        r.add(arr[0][1]);
+        for(int i=1;i<arr.length;i++){
+            if(arr[i][0]<=r.get(1)){
+                if(arr[i][1]>r.get(1)){
+                    r.set(1,arr[i][1]);
+                }
+            }
+            else{
+                temp.add(r);
+                r=new ArrayList<>();
+                r.add(arr[i][0]);
+                r.add(arr[i][1]);
+
+            }
+        }
+        temp.add(r);
+        int[][]res=new int[temp.size()][2];
         for (int i = 0; i <temp.size() ; i++) {
             r=temp.get(i);
             res[i][0]=r.get(0);
